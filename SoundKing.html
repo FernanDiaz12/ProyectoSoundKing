@@ -15,31 +15,37 @@
   </header>
   <!--navbar-->
   <nav class="navbar navbar-expand-lg bg-secondary
-  ">
-    <div class="container-fluid">
-      <a class="navbar-brand text-dark" href="SoundKing.html">
-        SoundKing</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active text-light" href="Guitarra.html">Guitarras y bajos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="Bateria.html">Bateria</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="Piano.html">Pianos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled text-light" aria-disabled="true">Contacto</a>
-          </li>
-        </ul>
+    ">
+      <div class="container-fluid">
+        <a class="navbar-brand text-dark" href="SoundKing.html">
+          SoundKing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guitarras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="GuitarraAcustica.html">Guitarras acusticas</a></li>
+                <li><a class="dropdown-item" href="GuitarraElectrica.html">Guitarras electricas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Bateria.html">Bateria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Piano.html">Pianos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-light" aria-disabled="true">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   <!--carrousel-->
   <div id="carouselSliding" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -48,7 +54,7 @@
       <button type="button" data-bs-target="#carouselSliding" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active " data-bs-interval="6000">
+      <div class="carousel-item active" data-bs-interval="6000">
         <img src="Img/Guitarra.jpg" class="imgCarrousel" alt="guitarra">
       </div>
       <div class="carousel-item" data-bs-interval="6000">
