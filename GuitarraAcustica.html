@@ -44,54 +44,55 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-light" href="Piano.html">Carrito</a>
+              <a class="nav-link text-light" href="SoundKing.html">Carrito</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#contacto">Iniciar Sesion</a>
+              <a class="nav-link text-light" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar Sesión</a>
           </ul>
         </div>
       </div>
     </nav>
     <!--Cards-->
+    <div class="container-fluid bg-dark">
     <br>
     <div class="container">
       <div class="row">
         <div class="col-sm mb-2">
-          <div class="card CARTAS2">
+          <div class="card text-center CARTAS2">
             <img src="Img/GuitarraTakamine.jpeg" class="card-img-top CARTAS" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Guitarra Takamine</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">Guitarra Takamine GJ72CE</h5>
+              <p class="card-text">$500.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
         <div class="col-sm mb-2">
-          <div class="card CARTAS2">
+          <div class="card text-center CARTAS2">
             <img src="Img/GuitarraEpiphone.jpeg" class="card-img-top CARTAS" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Guitarra Epiphone</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">Guitarra Epiphone EE1CNACH1</h5>
+              <p class="card-text">$400.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
         <div class="col-sm mb-2">
-          <div class="card CARTAS2">
+          <div class="card text-center CARTAS2">
             <img src="img/GuitarraTaylor.jpeg" class="card-img-top CARTAS" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Guitarra Taylor</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              <h5 class="card-title">Guitarra Taylor 224CE-K</h5>
+              <p class="card-text">$200.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
         <div class="col-sm mb-2">
-          <div class="card CARTAS2">
+          <div class="card text-center CARTAS2">
             <img src="img/GuitarraGibson.jpeg" class="card-img-top CARTAS" alt="...">
             <div class="card-body">
               <h5 class="card-title">Guitarra Gibson J-45</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">$300.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
@@ -99,28 +100,47 @@
       </div>
     </div> 
     <br> 
-    <footer id="contacto" class="container-fluid bg-secondary">
-      <br>
-      <div class="row">
-        <div class="col">
-          <h2>Sitio</h2>
-          <ul>
-            <li>Inicio</li>
-            <li>Carrito</li>
-            <li>Cuenta</li>
-          </ul>
+  </div>
+  <!--modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="col">
-            <h2>Contacto</h2>
-            <ul>
-                <li>Soundking@hotmail.com</li>
-                <li>(56) 9 5674 4332</li>
-            </ul>
+        <div class="modal-body">
+          Esta a punto de ser redireccionado al incio de sesion. 
         </div>
-        <div class="col">
-            <h2>(c) 2024 SoundKing</h2>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="Login.html"><button" class="btn btn-primary">Acepto</button></a>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+  <footer id="contacto" class="container-fluid bg-secondary">
+    <br>
+    <div class="row">
+      <div class="col">
+        <h2 class="fw-bold">Sitio</h2>
+        <ul>
+          <a href="SoundKing.html"><li class="text-white">Inicio</li></a>
+          <li class="text-white">Carrito</li>
+          <li class="text-white">Cuenta</li>
+        </ul>
+      </div>
+      <div class="col">
+          <h2 class="fw-bold">Contacto</h2>
+          <ul>
+              <li class="text-white">Soundking@hotmail.com</li>
+              <li class="text-white">(56) 9 5674 4332</li>
+          </ul>
+      </div>
+      <div class="col">
+          <h2 class="fw-bold">(c) 2024 SoundKing</h2>
+      </div>
+    </div>
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
