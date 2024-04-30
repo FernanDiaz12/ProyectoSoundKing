@@ -1,4 +1,5 @@
-function validar() {
+// Validar Registro de sesion
+function validarRegistro() {
 	var nombre = document.forms["formRegistro"]["nombre"].value;
 	var correo = document.forms["formRegistro"]["correo"].value;
 	var contraseña = document.forms["formRegistro"]["contraseña"].value;
@@ -55,6 +56,35 @@ function validar() {
     event.preventDefault(); 
     
 }else{
-  alert('REGISTRO COMPLETADO ☑');
+  alert('REGISTRO COMPLETADO');
 }
+}
+// Validar Inicio de sesion
+function validarInicio() {
+  var contraseña = document.forms["formInicio"]["contraseña"].value;
+  var correo = document.forms["formInicio"]["correo"].value;
+  var text;
+  formValido=true;
+
+if (correo.length == 0){
+    text = "Correo no debe estar vacio";   
+  formValido = false;
+}else{
+    text = "";
+}
+document.getElementById("valida_mail").innerHTML = text;
+
+if (contraseña.length < 8){
+    text = "Contrasena debe tener largo 8";
+    formValido = false;
+    }else{
+      text = "";
+    }
+    document.getElementById("valida_contra").innerHTML = text;
+    if (!formValido) {
+      event.preventDefault(); 
+      
+  }else{
+    alert('Inicio COMPLETADO');
+  }
 }
