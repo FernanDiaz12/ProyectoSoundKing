@@ -11,13 +11,13 @@
 <body>
     
   <div class="container min-vh-100 d-flex justify-content-center align-items-center bg-light rgb">
-    <form name="formInicio" onsubmit="validarInicio(event)">
+    <form name="formInicio" id="form1" onsubmit="validarInicio(event)">
         <div class="text-center mb-2">
         <img src="Img/Logo.png">
         </div>
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" name="correo" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="exampleInputEmail1" name="correo" aria-describedby="emailHelp">
         <p id="valida_mail"></p>
         </div>
         <div class="mb-3">
@@ -42,13 +42,13 @@
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <form class="container col-6 justify-content-center mt-3" method="POST" action="procesar.php" name="formRegistro" onsubmit="validarRegistro(event)"> 
+        <form class="container col-6 justify-content-center mt-3" method="POST" action="procesar.php" id="form2" name="formRegistro" onsubmit="validarRegistro(event)"> 
             <label for="nombre">Ingrese nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control">
             <p id="valida_nombre"></p>
         <div class="form-group">
             <label for="correo">Ingrese correo</label>
-            <input type="email" name="correo" id="correo" class="form-control" placeholder="Solo carácteres">
+            <input type="text" name="correo" id="correo" class="form-control" placeholder="Solo carácteres">
             <p id="valida_email"></p>
         </div>
         <div class="form-group">
