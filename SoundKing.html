@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/miCss.css">
     <title>SoundKing</title>
-    <script src="js/validar.js"></script>
+    <script src="js/api.js"></script>
 </head>
 
 <body>
@@ -104,6 +104,7 @@
             <h5 class="card-title">Guitarra Pacifica</h5>
             <p class="card-text">$200.000 CLP</p>
             <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            <a href="#" class="btn btn-primary">Ficha Tecnica</a>
           </div>
         </div>
       </div>
@@ -114,6 +115,7 @@
             <h5 class="card-title">Guitarra Epiphone</h5>
             <p class="card-text">$400.000 CLP</p>
             <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guitarra">Ficha Tecnica</a>
           </div>
         </div>
       </div>
@@ -140,6 +142,7 @@
               <h5 class="card-title">Bateria Pearl Vision</h5>
               <p class="card-text">$1.500.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Ficha Tecnica</a>
             </div>
           </div>
         </div>
@@ -150,6 +153,7 @@
               <h5 class="card-title">Bateria Tama IP52C</h5>
               <p class="card-text">$600.000 CLP</p>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Ficha Tecnica</a>
             </div>
           </div>
         </div>
@@ -169,30 +173,32 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-sm mb-2">
+      <div class="col-sm mb-3">
         <div class="card text-center h-100">
           <img src="Img/PianoKawai.jpeg" class="card-img-top CARTAS h-100" alt="...">
           <div class="card-body">
             <h5 class="card-title">Piano Kawai KG1E</h5>
             <p class="card-text">$8.817.840 CLP</p>
             <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            <a href="#" class="btn btn-primary">Ficha Tecnica</a>
           </div>
         </div>
       </div>
-      <div class="col-sm mb-2">
+      <div class="col-sm mb-3">
         <div class="card text-center h-100">
           <img src="Img/Steinway C227.jpg" class="card-img-top CARTAS h-100" alt="...">
           <div class="card-body">
             <h5 class="card-title">Piano Steinway C277</h5>
             <p class="card-text">$7.000.000CLP</p>
             <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            <a href="#" class="btn btn-primary">Ficha Tecnica</a>
           </div>
         </div>
       </div>
     </div>
   </div>
    <!--api-clima-->
-   <div class="container bg-light mb-1">
+   <div class="container rounded bg-light mb-1">
     <br>
    <h1 class="text-center">Clima Actual</h1>
    <div class="row">
@@ -222,6 +228,38 @@
       </div>
     </div>
   </div>
+  <!--modal-->
+  <div class="modal fade" id="guitarra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ficha Técnica - Guitarra</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Marca: [Nombre de la marca]</li>
+            <li>Modelo: [Nombre del modelo]</li>
+            <li>Color: [Color de la guitarra]</li>
+            <li>Material del cuerpo: [Material del cuerpo]</li>
+            <li>Material del mástil: [Material del mástil]</li>
+            <li>Diapasón: [Material del diapasón]</li>
+            <li>Número de trastes: [Número de trastes]</li>
+            <li>Pastillas: [Tipo de pastillas]</li>
+            <li>Puente: [Tipo de puente]</li>
+            <li>Escalado: [Longitud del escalado]</li>
+            <li>Dimensiones: [Dimensiones de la guitarra]</li>
+            <li>Peso: [Peso de la guitarra]</li>
+            <li>Otros: [Otras características relevantes]</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal-->
   <footer id="contacto" class="container-fluid bg-secondary">
     <br>
     <div class="row">
