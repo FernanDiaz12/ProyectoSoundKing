@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/miCss.css' %}">
+    <title>Guitarras y Bajos-SoundKing</title>
+</head>
+<body>
+    <header class="container-fluid bg-light
+    d-flex justify-content-center">
+      <a href=""><img src="{% static 'Img/Logo.png' %}" alt="Logo SoundKing"></a>
+    </header>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-secondary
+    ">
+      <div class="container-fluid">
+        <a class="navbar-brand text-dark" href="/">
+          SoundKing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guitarras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="acustica">Guitarras acusticas</a></li>
+                <li><a class="dropdown-item" href="electrica">Guitarras electricas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="bateria">Bateria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="piano">Pianos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="acustica">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar Sesión</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Cards-->
+    <div class="container-fluid bg-dark">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <div class="card text-center h-100">
+            <img src="{% static 'Img/GuitarraTakamine.jpeg' %}" class="card-img-top CARTAS h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Takamine GJ72CE</h5>
+              <p class="card-text">$500.000 CLP</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#takamine">Ficha Tecnica</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-2">
+          <div class="card text-center h-100">
+            <img src="{% static 'Img/GuitarraEpiphone.jpeg' %}" class="card-img-top CARTAS h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Epiphone EE1CNACH1</h5>
+              <p class="card-text">$400.000 CLP</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#epiphone">Ficha Tecnica</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-2">
+          <div class="card text-center h-100">
+            <img src="{% static 'img/GuitarraTaylor.jpeg' %}" class="card-img-top CARTAS h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Taylor 224CE-K</h5>
+              <p class="card-text">$200.000 CLP</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taylor">Ficha Tecnica</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-2">
+          <div class="card text-center h-100">
+            <img src="{% static 'img/GuitarraGibson.jpeg' %}" class="card-img-top CARTAS h-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Gibson J-45</h5>
+              <p class="card-text">$300.000 CLP</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gibson">Ficha Tecnica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <br> 
+  </div>
+  <!--modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta seguro?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Esta a punto de ser redireccionado al incio de sesion. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="login"><button" class="btn btn-primary">Acepto</button></a>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guitarra">Ficha Tecnica</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal-->
+  <div class="modal fade" id="takamine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ficha Técnica</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Cuerpo: Jumbo</li>
+            <li>Tapa: Abeto Solido</li>
+            <li>Tapa Trasera: Maple Flameado</li>
+            <li>Laterales: Maple Flameado</li>
+            <li>Cuello: Maple</li>
+            <li>Diapason: Laurel</li>
+            <li>Acabado: Diapason</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="epiphone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ficha Técnica</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Cuerpo: Caoba Selecta</li>
+            <li>Tapa: Abeto Selecto</li>
+            <li>Tapa Trasera: Caoba Selecto</li>
+            <li>Laterales: Caoba Selecto</li>
+            <li>Trastes: Medium Jumbo</li>
+            <li>Incrustaciones: Punto</li>
+            <li>Binding: Negro</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="taylor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ficha Técnica</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Cuerpo: Grand Auditorium</li>
+            <li>Tapa: Koa</li>
+            <li>Tapa Trasera: Palo de Rosa</li>
+            <li>Laterales: Palo de Rosa</li>
+            <li>Mastil: Koa</li>
+            <li>Cuerdas: Metal</li>
+            <li>Linea: Koa</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="gibson" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ficha Técnica</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Cuerpo: Caoba</li>
+            <li>Tapa: Cedro</li>
+            <li>Tapa Trasera: Caoba</li>
+            <li>Laterales: Caoba</li>
+            <li>Mastil: Palisandro</li>
+            <li>Binding: Multi Capa</li>
+            <li>Acabado: Nitrocelulosa Brillante</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal-->
+  <footer id="contacto" class="container-fluid bg-secondary">
+    <br>
+    <div class="row">
+      <div class="col">
+        <h2 class="fw-bold">Sitio</h2>
+        <ul>
+          <a href=""><li class="text-white">Inicio</li></a>
+          <li class="text-white">Carrito</li>
+          <li class="text-white">Cuenta</li>
+        </ul>
+      </div>
+      <div class="col">
+          <h2 class="fw-bold">Contacto</h2>
+          <ul>
+              <li class="text-white">Soundking@hotmail.com</li>
+              <li class="text-white">(56) 9 5674 4332</li>
+          </ul>
+      </div>
+      <div class="col">
+          <h2 class="fw-bold">(c) 2024 SoundKing</h2>
+      </div>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>

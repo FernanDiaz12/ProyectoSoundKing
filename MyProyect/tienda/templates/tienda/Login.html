@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/miCss.css' %}">
+    <title>Login-SoundKing</title>
+    <script src="{% static 'js/validar.js' %}"></script>
+</head>
+<body>
+    
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center bg-light rgb">
+    <form name="formInicio" id="form1" onsubmit="validarInicio(event)">
+        <div class="text-center mb-2">
+        <img src="{% static 'Img/Logo.png' %}">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="correo" aria-describedby="emailHelp">
+        <p id="valida_mail"></p>
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="contraseña">
+        <p id="valida_contra"></p>
+        </div>
+        <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Registrarse</button>
+    </form>
+</div>
+<!--modal-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <form class="container col-6 justify-content-center mt-3" method="POST" action="procesar.php" id="form2" name="formRegistro" onsubmit="validarRegistro(event)"> 
+            <label for="nombre">Ingrese nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form-control">
+            <p id="valida_nombre"></p>
+        <div class="form-group">
+            <label for="correo">Ingrese correo</label>
+            <input type="text" name="correo" id="correo" class="form-control" placeholder="Solo carácteres">
+            <p id="valida_email"></p>
+        </div>
+        <div class="form-group">
+            <label for="contraseña">Ingrese contraseña</label>
+            <input type="text" name="contraseña" id="contraseña" class="form-control">
+            <p id="valida_password"></p>
+        </div>
+        <div class="form-group">
+            <label for="direccion">Ingrese direccion </label>
+            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="7 norte, 2440">
+            <p id="valida_direccion"></p>
+        </div>
+           <div class="form-group">
+            <label for="ciudad">Ingrese ciudad</label>
+            <input type="text" class="form-control"  id="ciudad" name="ciudad"  placeholder="Viña del mar">
+            <p id="valida_ciudad"></p>
+           </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      <input type="submit" class="btn btn-primary" id="enviar" value="Registrarse">
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+      
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body> 
+    

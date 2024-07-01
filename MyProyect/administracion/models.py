@@ -6,15 +6,24 @@ class Marca(models.Model):
     marca = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.marca
+
 class Tipo_Instrumento(models.Model):
     id = models.IntegerField 
     tipo_instrumento = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.tipo_instrumento
+
 class Material(models.Model):
     id = models.IntegerField 
     material = models.CharField(max_length=30)
-    descripcion = models.CharField(max_length=200) 
+    descripcion = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.material
 
 class Instrumentos(models.Model):
     id = models.IntegerField 
@@ -26,5 +35,8 @@ class Instrumentos(models.Model):
     color = models.CharField(max_length=20)
     precio = models.IntegerField
     peso = models.IntegerField
-    descripcion = models.CharField(max_length=200)           
+    descripcion = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.nombre        
 
