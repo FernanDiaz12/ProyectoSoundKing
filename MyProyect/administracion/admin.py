@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import  Marca
 from .models import  Material
-from .models import  Instrumentos
+from administracion.models import  Instrumentos
 from .models import  Tipo_Instrumento
 
 # Register your models here.

@@ -26,15 +26,15 @@ class Material(models.Model):
         return self.material
 
 class Instrumentos(models.Model):
-    id = models.IntegerField 
+    id = models.IntegerField(primary_key=True)
     tipo_instrumento = models.ForeignKey(Tipo_Instrumento,on_delete=models.CASCADE)
     material = models.ForeignKey(Material,on_delete=models.CASCADE)
     marca = models.ForeignKey(Marca,on_delete=models.CASCADE)
     nombre = models.CharField(max_length=50)
     imagen = models.CharField(max_length=200)
     color = models.CharField(max_length=20)
-    precio = models.IntegerField
-    peso = models.IntegerField
+    precio = models.FloatField()
+    peso = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=200)
 
     def __str__(self):

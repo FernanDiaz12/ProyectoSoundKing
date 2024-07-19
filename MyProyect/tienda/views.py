@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def home(request):
     return render(request, "tienda/SoundKing.html", {})
@@ -18,3 +19,6 @@ def electrica(request):
 
 def login(request):
     return render(request, "tienda/Login.html", {})
+
+def carrito(request):
+    return render(request, "tienda/Carrito.html", {})
